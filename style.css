@@ -1,0 +1,136 @@
+body {
+    font-size: calc(15px + 0.390625vw);
+    display: flex;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Lato', sans-serif;
+}
+
+.left {
+    background-image: url("sunset.jpg");
+    background-size: cover;
+    color: antiquewhite;
+    min-width: 35vw;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.logo {
+    height: 8rem;
+    width: 35vw;
+    position: absolute;
+    top: 24.5vh;
+    background: #F9FAFB;
+    opacity: 0.4; 
+}
+
+.icon_container {
+    height: 8rem;
+    width: 35vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    font-size: 3rem;
+    font-family: 'Permanent Marker', cursive;
+}
+
+#icon {
+    display:inline-block;
+    height: 7rem;
+    margin-right: 2rem;
+}
+
+p {
+    margin: 0;
+    padding: 0;;
+}
+
+.credit {
+    font-size: 10px;
+}
+
+.credit a{
+    color: antiquewhite;
+}
+
+.right {
+    min-width: 65vw;
+}
+
+.pitch {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    padding-bottom: 5rem;
+    padding-left: 2rem;
+    font-weight: bold;
+    background: #F9FAFB;
+    min-height: 30vh;
+}
+
+.form {
+    box-shadow: 3px 5px 5px rgb(126, 124, 124);
+    padding-left: 2rem;
+    padding-top:1rem;
+    padding-bottom: 1rem;
+    min-height: 20vh;
+}
+
+label {
+    display: block;
+    font-size: 0.7rem;
+}
+
+input {
+    margin-bottom: 1em;
+    background: #F9FAFB;
+    border: 1px solid #6196B8;
+    border-radius: 2px;
+}
+
+.form-row input[type='text'],
+  .form-row input[type='email'],    
+  .form-row input[type='tel'],
+  .form-row input[type='password'],
+  .form-row select,                
+  .form-row textarea {              
+    width: 10rem;
+    height: initial;
+  }
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-group {
+    width: 50%;
+}
+
+.sub {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    background: #F9FAFB;
+    min-height: 30vh;
+    font-size: 0.8rem;
+}
+
+button {
+    background: #6196B8;
+    color: white;
+    border-radius: 4px;
+    padding: 5px;
+    font-family: inherit;
+    margin-bottom: 1rem;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: 0.07ms;
+    background:#4d7f9e;
+}
