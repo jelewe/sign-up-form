@@ -15,6 +15,7 @@ body {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+    position: relative;
 }
 
 .logo {
@@ -22,8 +23,7 @@ body {
     width: 35vw;
     position: absolute;
     top: 24.5vh;
-    background: #F9FAFB;
-    opacity: 0.4; 
+    background: rgba(249, 250, 251, 0.4);
 }
 
 .icon_container {
@@ -33,7 +33,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color:black;
+    color: #F9FAFB;
     font-size: 3rem;
     font-family: 'Permanent Marker', cursive;
 }
@@ -42,6 +42,7 @@ body {
     display:inline-block;
     height: 7rem;
     margin-right: 2rem;
+    filter: invert(1);
 }
 
 p {
@@ -53,7 +54,7 @@ p {
     font-size: 10px;
 }
 
-.credit a{
+.credit a {
     color: antiquewhite;
 }
 
@@ -73,7 +74,6 @@ p {
 }
 
 .form {
-    box-shadow: 3px 5px 5px rgb(126, 124, 124);
     padding-left: 2rem;
     padding-top:1rem;
     padding-bottom: 1rem;
@@ -89,17 +89,23 @@ input {
     margin-bottom: 1em;
     background: #F9FAFB;
     border: 1px solid #6196B8;
-    border-radius: 2px;
-}
-
-.form-row input[type='text'],
-  .form-row input[type='email'],    
-  .form-row input[type='tel'],
-  .form-row input[type='password'],
-  .form-row select,                
-  .form-row textarea {              
+    border-radius: 2px;       
     width: 10rem;
     height: initial;
+  }
+
+  input:focus {
+    outline: none;
+    box-shadow: 2px 2px 2px grey;
+    border: 1px solid blue;
+    border-radius: 2px;
+  }
+
+  input[type="password"]:invalid {
+    outline: none;
+    box-shadow: 2px 2px 2px grey;
+    border: 1px solid red;
+    border-radius: 2px;
   }
 
 .form-row {
@@ -109,6 +115,12 @@ input {
 
 .form-group {
     width: 50%;
+}
+
+.error-msg {
+    font-size: 0.7rem;
+    color: crimson;
+    visibility: hidden;
 }
 
 .sub {
@@ -124,7 +136,7 @@ button {
     background: #6196B8;
     color: white;
     border-radius: 4px;
-    padding: 5px;
+    padding: 5px 30px;
     font-family: inherit;
     margin-bottom: 1rem;
 }
@@ -133,4 +145,43 @@ button:hover {
     cursor: pointer;
     transform: 0.07ms;
     background:#4d7f9e;
+}
+
+.sub a {
+    font-weight: bold;
+    color: #6196B8;
+}
+
+@media screen and (max-width: 940px) {
+	body {
+		flex-direction: column;
+		height: auto;
+	}
+
+    .left {
+        height: 80vh;
+        width: 100%;
+        position: relative;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 24vh;
+        width: 100%;
+    }
+
+	.form {
+		width: 10vw;
+	}
+
+	.form-row {
+		min-width: 250px;
+		width: 40%;
+	}
+
+	.form input {
+		width: 100%;
+	}
 }
